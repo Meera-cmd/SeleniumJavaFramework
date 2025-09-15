@@ -15,17 +15,11 @@ import static com.constants.Browsers.*;
 import static org.testng.Assert.assertEquals;
 
 @Listeners({com.ui.listeners.TestListener.class})
-public class LoginTest2 {
+public class LoginTest2 extends TestBase {
     HomePage homePage;
     Logger logger=LoggerUtility.getLogger(this.getClass());
 
 
-    @BeforeMethod(description = "Load the homePage of the website")
-    public void setUp() {
-        logger.info("Load the home page of the website");
-        homePage = new HomePage(CHROME);
-
-    }
 
     @Test(description = "Verified with the valid user is able to login to the application", groups = {"e2e", "sanity"},
      dataProviderClass = com.ui.dataproviders.LoginDataProvider.class,dataProvider = "LoginTestDataProvider",retryAnalyzer = com.ui.listeners.MyRetryAnalyser.class)
