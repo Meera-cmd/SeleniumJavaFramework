@@ -7,10 +7,31 @@
     <groupId>automation-assignment</groupId>
     <artifactId>Automation-Assignment</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>Test Automation framework for automationpractice.pl</name>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.4</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <broswer>>firefox</broswer>
+                        <isLambdaTest>false</isLambdaTest>
+                        <isHeadless>true</isHeadless>
+                    </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

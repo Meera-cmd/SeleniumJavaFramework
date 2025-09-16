@@ -16,8 +16,14 @@ public final class HomePage extends BrowserUtility {
 
     private static final By SIGN_IN_LINK_LOCATOR = By.xpath("//a[contains(text(),\"Sign in\")]");
 
-    public HomePage(Browsers browserName) {
-        super(browserName);// to call the parent class constructor from the child constructor
+    public HomePage(WebDriver driver) {
+        super(driver);// to call the parent class constructor from the child constructor
+//        gotoWebsite(readProperty(QA,"URL"));
+        gotoWebsite(JSONUtility.readJSON(QA).getUrl());
+        maximizeWindow();
+    }
+    public HomePage(Browsers browserName,boolean isHeadless) {
+        super(browserName,isHeadless);// to call the parent class constructor from the child constructor
 //        gotoWebsite(readProperty(QA,"URL"));
         gotoWebsite(JSONUtility.readJSON(QA).getUrl());
         maximizeWindow();
