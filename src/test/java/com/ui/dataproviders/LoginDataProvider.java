@@ -32,8 +32,14 @@ public class LoginDataProvider {
 
     }
 
-    @DataProvider(name="LoginCSVTestDataProvider")
-    public Iterator<User> loginCSVDataProvider(){
+//    @DataProvider(name="LoginCSVTestDataProvider")
+//    public Iterator<User> loginCSVDataProvider(){
+//        return CSVReaderUtility.readCSVFile("loginData.csv");
+//
+//    }
+
+    @DataProvider(name = "LoginCSVTestDataProvider")
+    public Iterator<User> loginCSVDataProvider() {
         return CSVReaderUtility.readCSVFile("loginData.csv");
 
     }

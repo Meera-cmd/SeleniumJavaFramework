@@ -21,7 +21,7 @@
                 <version>3.5.4</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <broswer>>firefox</broswer>
+                        <broswer>firefox</broswer>
                         <isLambdaTest>false</isLambdaTest>
                         <isHeadless>true</isHeadless>
                     </systemPropertyVariables>
