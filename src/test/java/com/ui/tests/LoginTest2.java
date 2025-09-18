@@ -16,10 +16,7 @@ import static org.testng.Assert.assertEquals;
 
 @Listeners({com.ui.listeners.TestListener.class})
 public class LoginTest2 extends TestBase {
-    HomePage homePage;
     Logger logger=LoggerUtility.getLogger(this.getClass());
-
-
 
     @Test(description = "Verified with the valid user is able to login to the application", groups = {"e2e", "sanity"},
      dataProviderClass = com.ui.dataproviders.LoginDataProvider.class,dataProvider = "LoginTestDataProvider",retryAnalyzer = com.ui.listeners.MyRetryAnalyser.class)
